@@ -116,5 +116,65 @@ void Graph::DrawAxis(){
 
 void Graph::DrawLine(){
 	int startX = 2; // column
-	int startY = 0; // row;
+	int startY = row-2; // row
+	
+	int posX = startX, posY = startY;
+
+/*
+
+		  _ = RC
+/ , _ => /
+\ , _ => \_ = FC
+_ , _ => __ = CC
+
+
+
+		  / = RR
+/ , / => /
+\ , / => \/ = FR
+_ , / => _/ = CR
+
+
+/ , \ => /\ = RF
+\ , \ => \  = FF
+		  \
+_ , \ => _  = CF
+		  \
+
+
+*/
+	char tmp;
+
+	int i = 0;
+	for(i = 0; i < xAxis; i++){
+		switch(stockStatus[i]){
+			case 'R':
+				if(tmp == '/'){
+					posY--;
+					// cout << i << ":/" << endl;
+				}
+				painting[posY][posX] = '/';
+				tmp = '/';
+				break;
+			case 'F':
+				if(tmp != '/'){
+					posY++;
+					// cout << i << ":\\" << endl;
+				}
+				painting[posY][posX] = '\\';
+				tmp = '\\';
+				break;
+			case 'C':
+				if(tmp == '/'){
+					posY--;
+					// cout << i << ":_" << endl;
+				}
+				painting[posY][posX] = '_';
+				tmp = '_';
+				break;
+			default: break;
+		}
+		posX++;
+	}
+
 }
