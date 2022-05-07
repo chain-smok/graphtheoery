@@ -1,16 +1,18 @@
-Graph::Graph(const char* data){} 這個建構子是將輸入丟到物件的 stockStatus 參數裡面然後再根據輸入的字串，去找到繪圖的區域
+Graph::Graph(const char* data){} 這個建構子是將
+輸入丟到物件的 stockStatus 參數裡面然後再根據
+輸入的字串，去找到繪圖的區域
 Graph::~Graph() 就只是清除物件的資料
 int Graph::getX(){ return xAxis; }
-int Graph::getY(){ return yAxis; }這兩個只是會回傳兩種
-數值
+int Graph::getY(){ return yAxis; }這兩個只是會
+回傳兩種數值
 Graph::Draw()基本上就是印出 painting 的陣列內容
 Graph::PrintStatus()是印出輸入的字串，如RCFFRC
-Graph::SetXAxis()設定繪圖區域的寬度(基本上就是輸入幾個
-字串就是多大)
-Graph::SetYAxis()設定繪圖區域的高度這邊是找到最高點和
-最低點去算的
-Graph::DrawAxis()是將 painting 陣列畫成只有x, y 軸的畫
-面
+Graph::SetXAxis()設定繪圖區域的寬度(基本上就是
+輸入幾個字串就是多大)
+Graph::SetYAxis()設定繪圖區域的高度這邊是找到
+最高點和最低點去算的
+Graph::DrawAxis()是將 painting 陣列畫成只有x,
+y 軸的畫面
 Graph::DrawLine()畫線程式碼
 
 1.建立物件，物件參數是我們的字串輸入
