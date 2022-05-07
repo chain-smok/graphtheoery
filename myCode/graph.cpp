@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cstring>
-#include <cmath>
+//#include <cmath>
 #include <climits>
 
 #include "graph.h"
@@ -8,31 +8,23 @@
 using namespace std;
 
 int row = 0, col = 0;
-/*class Graph{
-   Graph(data);
-   ~Graph();
-   getX();
-   getY();
-   Draw();
-   PrintStatus();
-   SetXAxis();
-   SetYAxis();
-   DrawAxis();
-   DrawLine();
-};*/
+//先宣告class才有::
 // Public Field
-Graph::Graph(const char* data){ // 建構式(輸入為資料)
-	int dataLen = strlen(data); // 取得資料長度
-
-	stockStatus = (char*)malloc(sizeof(char) * dataLen + 1); // 輸入字串儲存空間初始化
-
-	// 設定 股票狀態、全部變成大寫
+Graph::Graph(const char* data){ 
+  // 建構式(輸入為資料)
+	int dataLen = strlen(data); 
+  // 取得資料長度
+	stockStatus = (char*)malloc
+  (sizeof(char) * dataLen + 1); 
+  // 輸入字串儲存空間初始化
+  //把字串丟到stockstatus這個儲存空間
 	strcpy(stockStatus, data);
+  // 設定 股票狀態、全部變成大寫
 	int i = 0;
 	for(i = 0; i < dataLen; i++){
 		stockStatus[i] = toupper(stockStatus[i]);
 	}
-  
+
 	// 設定 x, y 軸長度
 	SetXAxis();
 	SetYAxis();
@@ -90,6 +82,7 @@ void Graph::SetYAxis(){
 	int i = 0;
 	for(i = 0; i < strlen(stockStatus); i++){
 		switch(stockStatus[i]){
+      //R:RISE,F:FALL
 			case 'R':
 				sum++;
 				break;

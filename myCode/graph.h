@@ -12,7 +12,7 @@ class Graph{
 		int getX(); // 取得 x 軸
 		int getY(); // 取得 y 軸
 		void PrintStatus(); // 寫出輸入文字
-		void Draw(); // 畫出圖案
+		void Draw(); //畫出圖案
 	private:
 		int xAxis = -1; // x 軸
 		int yAxis = -1; // y 軸
