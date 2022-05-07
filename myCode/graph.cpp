@@ -8,7 +8,18 @@
 using namespace std;
 
 int row = 0, col = 0;
-
+/*class Graph{
+   Graph(data);
+   ~Graph();
+   getX();
+   getY();
+   Draw();
+   PrintStatus();
+   SetXAxis();
+   SetYAxis();
+   DrawAxis();
+   DrawLine();
+};*/
 // Public Field
 Graph::Graph(const char* data){ // 建構式(輸入為資料)
 	int dataLen = strlen(data); // 取得資料長度
@@ -21,7 +32,7 @@ Graph::Graph(const char* data){ // 建構式(輸入為資料)
 	for(i = 0; i < dataLen; i++){
 		stockStatus[i] = toupper(stockStatus[i]);
 	}
-
+  
 	// 設定 x, y 軸長度
 	SetXAxis();
 	SetYAxis();
