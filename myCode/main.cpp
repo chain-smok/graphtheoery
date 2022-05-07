@@ -14,9 +14,9 @@ int main(){
   for(i=1;i<=T;i++){
   cin>>s;
   //Graph g=new Graph(s);
-  Graph g(s);
+  Graph *g=new Graph(s);
   cout<<"case "<<"#"<<i<<":"<<endl;
-	g.Draw();
+	g->Draw();
 	//g.PrintStatus();
   cout<<endl;
   }
