@@ -15,9 +15,10 @@ int main(){
   cin>>s;
   //Graph g=new Graph(s);
   Graph g(s);
+  cout<<"case "<<"#"<<i<<":"<<endl;
 	g.Draw();
 	//g.PrintStatus();
   }
-}
+  }
 	return 0;
 }
