@@ -18,6 +18,7 @@ int main(){
   cout<<"case "<<"#"<<i<<":"<<endl;
 	g.Draw();
 	//g.PrintStatus();
+  cout<<endl;
   }
   }
 	return 0;
